@@ -1,5 +1,4 @@
 import carro from "./carro.png"
-import './carro.css';
 
 const CartWidget = () => {
 return (
