@@ -1,9 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react"
+import ItemList from "./itemList";
+import customFetch from "../utils/customFetch";
+const {productos} = require('../utils/productos');
 
-const ItemListContainer = (props) => {
-    
+const ItemListContainer = () => {
+ 
+    const [datos, setDatos] = useState ([])
+       
+      useEffect (()=>{
+        customFetch(2000, productos)
+            .then(result => setDatos(result) )
+            .catch(err => console.log("err"))
+    },[])
     const[cantidad, setCantidad] = useState(1);
-
+    
     const aumentar = () => {
         if (cantidad<5)
         setCantidad (cantidad+1)
@@ -14,12 +24,14 @@ const ItemListContainer = (props) => {
         setCantidad (cantidad-1)
     }
 
+    
     return (
       <>
-        <div>
-            <button onClick={aumentar}> + </button>
-            <p>{cantidad}</p>
+        <ItemList items={datos} />
+        <div className="contador">
             <button onClick={bajar}> - </button>
+            <p className="nroContador">{cantidad}</p>
+            <button onClick={aumentar}> + </button>
         </div>
         <div>
             Tenemos {cantidad} Items Listados
@@ -28,4 +40,6 @@ const ItemListContainer = (props) => {
     )
     }
     
-export default ItemListContainer;
+
+
+    export default ItemListContainer;

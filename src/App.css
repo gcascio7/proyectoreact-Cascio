@@ -42,3 +42,26 @@
   height: 40px;
   position:relative;
 }
+
+.cards {  
+  width: fit-content;
+  padding: 10px;  
+  margin: 10px;
+  border: dashed 4px black ;
+}
+
+.galeria{
+  display: inline-flex;
+  margin: 5px;
+}
+
+.contador{
+  display: flex i;
+  align-items: center;
+}
+
+.nroContador{
+  font-size: 30px;
+  padding: 5px;
+  margin-top: 8px;
+}

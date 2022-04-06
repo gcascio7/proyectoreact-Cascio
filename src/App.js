@@ -7,7 +7,7 @@ function App() {
   return (
     <div>
     <Navbar></Navbar>
-    <ItemListContainer numero="0"/>
+    <ItemListContainer/>
     </div>
   );
 }
