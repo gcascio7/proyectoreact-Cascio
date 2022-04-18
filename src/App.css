@@ -1,7 +1,11 @@
-.App {
-  text-align: center;
+.teko {
+  font-family: 'Teko', sans-serif;
+  font-size:x-large;
 }
 
+.category{
+  margin-left: 18px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -43,17 +47,13 @@
   position:relative;
 }
 
-.cards {  
-  width: fit-content;
-  padding: 10px;  
-  margin: 10px;
-  border: dashed 4px black ;
+.galeria{
+  display: flex;
+  padding: 10px;
 }
 
-.galeria{
-  display: inline-flex;
+.card{
   margin: 10px;
-  padding: 10px;
 }
 
 .contador{
