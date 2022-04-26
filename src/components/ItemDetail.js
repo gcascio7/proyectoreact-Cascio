@@ -26,7 +26,7 @@ const ItemDetail = ({ item }) => {
                         <div className="card-body">
                             <h5 className="h1">{item.name}</h5>
                             <p className="card-text">{item.description}</p>
-                            <p className="card-text">{item.cost}</p>
+                            <p className="card-text">$ {item.cost}</p>
                             <p className="card-text"><small className="text-muted">{item.stock} unidades en stock</small></p>
                             {
                                 itemCount === 0 

@@ -1,6 +1,10 @@
 .teko {
   font-family: 'Teko', sans-serif;
   font-size:x-large;
+  min-height: 76vh;
+  max-width: 80vw;
+  margin: auto;
+  flex-grow: 1;
 }
 
 .category{
@@ -54,6 +58,7 @@
 
 .card{
   margin: 10px;
+  height:450px ;
 }
 
 .contador{
@@ -72,4 +77,13 @@
   font-size: 25px ;
 }
 
+.cart{
+  display: flex;
+  align-items: flex-start;
+  margin: 10px;
+  padding: 30px;
+}
 
+.descripcion{
+  padding: 10px;
+}
