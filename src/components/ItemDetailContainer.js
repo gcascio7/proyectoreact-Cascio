@@ -1,25 +1,43 @@
 import ItemDetail from "./ItemDetail";
 import { useEffect, useState } from "react";
-import customFetch from "../utils/customFetch";
 import { useParams } from "react-router-dom";
-const { productos } = require('../utils/productos');
+import { doc, getDoc } from "firebase/firestore";
+import db from '../utils/firebaseConfig'
+
 
 const ItemDetailContainer=()=>{
 
-    const {ID} = useParams();
+    const {id} = useParams();
 
-    const [dato, setDato] = useState ([])
-       
-      useEffect (()=>{
-          customFetch(2000, productos.find(item => item.id === parseInt(ID)))
-              .then(result => setDato(result) )
-              .catch(err => console.log(err)) 
-    },[])
+    const [dato, setDato] = useState ({})
    
+    const firestoreOne = async (id) => {
+        const docRef = doc(db, "products", id);
+        const docSnap = await getDoc(docRef);
+        
+        if (docSnap.exists()) {
+            return {
+                id: id,
+                ...docSnap.data()
+            }
+            } else {
+          console.log("No such document!");
+        }
+    }
 
+    useEffect (()=>{
+      
+        firestoreOne(id)
+          .then(result => setDato(result))
+          .catch(err => console.log(err))
+    },[]);
+   
+  
     return(
         <ItemDetail item={dato} />
     )
 }
 
 export default ItemDetailContainer
+
+

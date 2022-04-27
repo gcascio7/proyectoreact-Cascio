@@ -7,7 +7,7 @@ const ItemList = ({items}) => {
             items.length>0
             ?items.map(item => 
                 <Item
-                id={item.id}
+                id={item.idItem}
                 title={item.name}
                 price={item.cost}
                 stock={item.stock}

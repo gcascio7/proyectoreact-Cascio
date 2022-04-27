@@ -17,9 +17,9 @@ const Cart = () => {
                         <h2> {item.name} </h2>
                         <div> {item.qtyItem} Item/s </div>
                         <div> $ {item.price} c/u</div> 
-                        <div> $ {test.calcTotalItem(item.id)} Total </div>
+                        <div> $ {test.calcTotalItem(item.idItem)} Total </div>
                     </div>
-                    <button onClick= {()=> test.borrarItem(item.id)}>Borrar Item/s</button>      
+                    <button onClick= {()=> test.borrarItem(item.idItem)}>Borrar Item/s</button>      
                  </div>      
                 )
                 
