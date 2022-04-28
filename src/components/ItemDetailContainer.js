@@ -7,17 +7,17 @@ import db from '../utils/firebaseConfig'
 
 const ItemDetailContainer=()=>{
 
-    const {id} = useParams();
+    const {idItem} = useParams();
 
     const [dato, setDato] = useState ({})
    
-    const firestoreOne = async (id) => {
-        const docRef = doc(db, "products", id);
+    const firestoreOne = async (idItem) => {
+        const docRef = doc(db, "products", idItem);
         const docSnap = await getDoc(docRef);
         
         if (docSnap.exists()) {
             return {
-                id: id,
+                id: idItem,
                 ...docSnap.data()
             }
             } else {
@@ -27,7 +27,7 @@ const ItemDetailContainer=()=>{
 
     useEffect (()=>{
       
-        firestoreOne(id)
+        firestoreOne(idItem)
           .then(result => setDato(result))
           .catch(err => console.log(err))
     },[]);

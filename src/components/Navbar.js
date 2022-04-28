@@ -9,13 +9,13 @@ const Navbar = () => {
           <div className="navbar-collapse category" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-              <Link to="/category/1"> <a className="nav-link active" aria-current="page" href="#">Remeras</a></Link>
+              <Link to="/category/remeras"> <a className="nav-link active" aria-current="page" href="#">Remeras</a></Link>
               </li>
               <li className="nav-item">
-              <Link to="/category/2"><a className="nav-link active" href="#">Pantalones</a></Link>
+              <Link to="/category/pantalones"><a className="nav-link active" href="#">Pantalones</a></Link>
               </li>
               <li className="nav-item">
-              <Link to="/category/3"><a className="nav-link active" href="#">Camperas</a></Link>
+              <Link to="/category/camperas"><a className="nav-link active" href="#">Camperas</a></Link>
               </li>
             </ul>
           </div>
