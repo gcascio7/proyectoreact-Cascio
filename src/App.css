@@ -53,12 +53,14 @@
 
 .galeria{
   display: flex;
+  flex-wrap: wrap;
   padding: 10px;
+  justify-content: space-around;
+  
 }
 
 .card{
   margin: 10px;
-  height:450px ;
 }
 
 .contador{
@@ -82,8 +84,31 @@
   align-items: flex-start;
   margin: 10px;
   padding: 30px;
+  width: 500px;
+  border: solid 5px black;
+  border-radius: 10px;
+
 }
 
 .descripcion{
   padding: 10px;
+}
+
+.img{
+  width:100%;
+}
+
+.h2{
+ color: white;
+ 
+}
+a:link, a:active, a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.carrito{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }

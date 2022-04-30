@@ -1,5 +1,6 @@
 import { collection, doc, increment, serverTimestamp, setDoc, updateDoc } from 'firebase/firestore';
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
 import db from '../utils/firebaseConfig';
 
@@ -45,14 +46,14 @@ const Cart = () => {
     return (
         <div >
             <h1>YOUR CART</h1> 
-                     
+              <div className='carrito'>    
             {
             test.cartList.length > 0 && (
                 test.cartList.map(item=>
                 <div className='cart'>              
                     <img src={item.imageURL} />
                     <div className='descripcion'> 
-                        <h2> {item.name} </h2>
+                    <Link to={`/detail/${item.idItem}`}><h2 className='a'> {item.name} </h2></Link>
                         <div> {item.qtyItem} Item/s </div>
                         <div> $ {item.price} c/u</div> 
                         <div> $ {test.calcTotalItem(item.idItem)} Total </div>
@@ -63,10 +64,10 @@ const Cart = () => {
                 
              )
                         } 
-            
+            </div>   
             {
                     (test.cartList.length > 0)
-                    ?  <button onClick={test.deleteCart}>Eliminar Todo</button>
+                    ?  <button className='btn btn-danger' onClick={test.deleteCart}>Eliminar Todo</button>
                     : <p>Carrito Vacio</p>
             }
 
@@ -74,12 +75,12 @@ const Cart = () => {
                 test.cartList.length > 0 &&(   
                     <div>
                           <div> TOTAL CARRITO = $ {test.calcTotal()}</div>
-                          <button onClick={checkout}> TERMINAR MI COMPRA </button> 
+                          <button className='btn btn-success' onClick={checkout}> TERMINAR MI COMPRA </button> 
                     </div>
                 )
             }
 
-
+            
         </div>  
     
     );
