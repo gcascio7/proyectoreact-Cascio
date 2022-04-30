@@ -51,7 +51,7 @@ const Cart = () => {
             test.cartList.length > 0 && (
                 test.cartList.map(item=>
                 <div className='cart'>              
-                    <img src={item.imageURL} />
+                    <img src={item.imageURL}  alt=""/>
                     <div className='descripcion'> 
                     <Link to={`/detail/${item.idItem}`}><h2 className='a'> {item.name} </h2></Link>
                         <div> {item.qtyItem} Item/s </div>
