@@ -28,7 +28,7 @@ const CartContextProvider = ({children}) => {
     }
 
     const borrarItem = (id) => {
-        let result = cartList.filter(item=>item.idItem !=id)
+        let result = cartList.filter(item=>item.idItem !==gitid)
         setCartList(result)
     }
 
