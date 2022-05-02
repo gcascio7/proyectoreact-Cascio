@@ -1,5 +1,4 @@
-import { useEffect, useState, useContext } from "react";
-import { CartContext } from "../context/CartContext";
+import { useEffect, useState} from "react";
 
 
 const ItemCount = ({ stock = 0, initial = 1, onAdd}) => {
@@ -7,7 +6,7 @@ const ItemCount = ({ stock = 0, initial = 1, onAdd}) => {
         const[cantidad, setCantidad] = useState(0);
         
         useEffect(() => {
-            setCantidad(initial = 1)
+            setCantidad(initial = 0)
         },[])
 
         const aumentar = () => {
