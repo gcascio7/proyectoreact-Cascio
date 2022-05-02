@@ -1,12 +1,12 @@
 import { useEffect, useState} from "react";
 
 
-const ItemCount = ({ stock = 0, initial = 1, onAdd}) => {
+const ItemCount = ({ stock = 0, initial, onAdd}) => {
 
         const[cantidad, setCantidad] = useState(0);
         
-        useEffect(() => {
-            setCantidad(initial = 0)
+        useEffect((initial = 0) => {
+            setCantidad(initial)
         },[])
 
         const aumentar = () => {

@@ -5,17 +5,17 @@ const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark w-auto">
         <div className="container-fluid">
-          <Link to="/"><a className="h2" href="" >Braca Indumentaria</a></Link>
+          <Link to="/"><h1 className="h1">Braca Indumentaria</h1></Link>
           <div className="navbar-collapse category" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-              <Link to="/category/remeras"href=""> <a className="nav-link active">Remeras</a></Link>
+              <Link to="/category/remeras" className="nav-link active"> Remeras</Link>
               </li>
               <li className="nav-item">
-              <Link to="/category/pantalones"href=""><a className="nav-link active">Pantalones</a></Link>
+              <Link to="/category/pantalones" className="nav-link active">Pantalones</Link>
               </li>
               <li className="nav-item">
-              <Link to="/category/camperas" href=""><a className="nav-link active">Camperas</a></Link>
+              <Link to="/category/camperas" className="nav-link active">Camperas</Link>
               </li>
             </ul>
           </div>
