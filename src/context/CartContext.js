@@ -9,7 +9,7 @@ const CartContextProvider = ({children}) => {
         let found = cartList.find(productos => productos.idItem === item.id)
         if (found === undefined){
         setCartList([
-            ... cartList,
+            ...cartList,
             {
                 idItem: item.id,
                 name: item.name,

@@ -30,7 +30,7 @@ const ItemDetailContainer=()=>{
         firestoreOne(idItem)
           .then(result => setDato(result))
           .catch(err => console.log(err))
-    },[]);
+    },[idItem]);
    
   
     return(

@@ -4,13 +4,10 @@ import { CartContext } from "../context/CartContext";
 
 const ItemCount = ({ stock = 0, initial = 1, onAdd}) => {
 
-        const Count = useContext(CartContext)
-
-
         const[cantidad, setCantidad] = useState(0);
         
         useEffect(() => {
-            setCantidad(initial)
+            setCantidad(initial = 1)
         },[])
 
         const aumentar = () => {
