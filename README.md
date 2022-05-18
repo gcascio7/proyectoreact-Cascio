@@ -36,7 +36,7 @@ _Esta tienda es un trabajo realizado para el curso de CoderHouse, de React Js_
 
 
 
-## Autores ✒️
+## Autorgit ✒️
 
 * **Gian Franco Cascio** - *Trabajo Inicial* 
 
